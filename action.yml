@@ -1,0 +1,19 @@
+name: 'Setup Keychain'
+description: 'Set up new macOS keychain for easy certificate management'
+branding:
+  icon: 'feather'
+  color: 'orange'
+author: 'Jaehong Kang'
+inputs:
+  keychain-name:
+    description: 'Name to use for new keychain.'
+    default: 'build.keychain'
+  keychain-password:
+    description: 'A password to use for new keychain.'
+    default: 'alpine'
+  keychain-timeout:
+    description: 'Amount of seconds to timeout keychain authentication.'
+    default: 3600
+runs:
+  using: 'node12'
+  main: 'lib/setup-keychain.js'
